@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piterads", "Piterads\Piterads.csproj", "{87DE5200-F973-4194-A958-5BF61E7E85DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87DE5200-F973-4194-A958-5BF61E7E85DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87DE5200-F973-4194-A958-5BF61E7E85DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87DE5200-F973-4194-A958-5BF61E7E85DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87DE5200-F973-4194-A958-5BF61E7E85DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2AF7D8FB-A299-4775-9256-D12103BF70E0}
+	EndGlobalSection
+EndGlobal
