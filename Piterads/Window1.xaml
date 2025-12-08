@@ -1,0 +1,172 @@
+﻿<Window x:Class="WpfServicesApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Piterads" Height="800" Width="1200"
+        WindowStartupLocation="CenterScreen"
+        Background="#F0F0F0">
+    <Window.Resources>
+        <Style x:Key="HeaderButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#000000"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="ServiceCardStyle" TargetType="Border">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#505050" Offset="0.0"/>
+                        <GradientStop Color="#202020" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+
+        <Style x:Key="CardTitleStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+
+        <Style x:Key="CardButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Background" Value="#D2B48C"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="White" BorderThickness="0,0,0,1" BorderBrush="#E0E0E0">
+            <Grid Margin="20,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Text="Piterads" 
+                           VerticalAlignment="Center" 
+                           FontSize="24" 
+                           FontWeight="SemiBold" 
+                           Foreground="#333333"/>
+
+                <Button Grid.Column="1" Content="Услуги" 
+                        Style="{StaticResource HeaderButtonStyle}" 
+                        Foreground="#666666" 
+                        Margin="0,0,15,0"/>
+
+                <Button Grid.Column="2" Content="Обратиться" 
+                        Background="#F8C789" 
+                        Foreground="Black" 
+                        FontWeight="SemiBold"
+                        Padding="20,5"
+                        BorderThickness="0"
+                        VerticalAlignment="Center" FontSize="14"/>
+            </Grid>
+        </Border>
+
+        <TextBlock Text="Piterads" 
+                   Grid.Row="1"
+                   FontSize="250"
+                   FontWeight="Bold"
+                   Foreground="#E0E0E0"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   RenderTransformOrigin="0.5,0.5"
+                   Opacity="0.5"/>
+
+        <Grid Grid.Row="1" Margin="30,20,30,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource ServiceCardStyle}">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Разработка брендбука HD.png" Stretch="UniformToFill"/>
+                </Border.Background>
+                <StackPanel VerticalAlignment="Bottom" Margin="15">
+                    <TextBlock Text="Разработка брендбука" Style="{StaticResource CardTitleStyle}"/>
+                    <Button Content="Подробнее" Style="{StaticResource CardButtonStyle}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource ServiceCardStyle}">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Разработка фирменного стиля HD.png" Stretch="UniformToFill"/>
+                </Border.Background>
+                <StackPanel VerticalAlignment="Bottom" Margin="15">
+                    <TextBlock Text="Разработка фирменного стиля" Style="{StaticResource CardTitleStyle}"/>
+                    <Button Content="Подробнее" Style="{StaticResource CardButtonStyle}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="0" Grid.Column="2" Style="{StaticResource ServiceCardStyle}">
+                <Border.Background>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/Разработка логотипа HD.png"/>
+                </Border.Background>
+                <StackPanel VerticalAlignment="Bottom" Margin="15">
+                    <TextBlock Text="Разработка логотипа" Style="{StaticResource CardTitleStyle}"/>
+                    <Button Content="Подробнее" Style="{StaticResource CardButtonStyle}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="1" Grid.Column="0" Style="{StaticResource ServiceCardStyle}">
+                <Border.Background>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/Наружная реклама HD.png"/>
+                </Border.Background>
+                <StackPanel VerticalAlignment="Bottom" Margin="15">
+                    <TextBlock Text="Наружная реклама" Style="{StaticResource CardTitleStyle}"/>
+                    <Button Content="Подробнее" Style="{StaticResource CardButtonStyle}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource ServiceCardStyle}">
+                <Border.Background>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/Интернет реклама HD.png"/>
+                </Border.Background>
+                <StackPanel VerticalAlignment="Bottom" Margin="15">
+                    <TextBlock Text="Интернет реклама" Style="{StaticResource CardTitleStyle}"/>
+                    <Button Content="Подробнее" Style="{StaticResource CardButtonStyle}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="1" Grid.Column="2" Style="{StaticResource ServiceCardStyle}">
+                <Border.Background>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/Разработка сайта HD.png"/>
+                </Border.Background>
+                <StackPanel VerticalAlignment="Bottom" Margin="15">
+                    <TextBlock Text="Разработка сайта" Style="{StaticResource CardTitleStyle}"/>
+                    <Button Content="Подробнее" Style="{StaticResource CardButtonStyle}"/>
+                </StackPanel>
+            </Border>
+
+        </Grid>
+    </Grid>
+</Window>

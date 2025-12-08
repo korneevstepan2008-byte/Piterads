@@ -8,4 +8,24 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Rectangle 19.png" />
+    <None Remove="Интернет реклама HD.png" />
+    <None Remove="Наружная реклама HD.png" />
+    <None Remove="Разработка брендбука HD.png" />
+    <None Remove="Разработка логотипа HD.png" />
+    <None Remove="Разработка сайта HD.png" />
+    <None Remove="Разработка фирменного стиля HD.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Rectangle 19.png" />
+    <Resource Include="Интернет реклама HD.png" />
+    <Resource Include="Наружная реклама HD.png" />
+    <Resource Include="Разработка брендбука HD.png" />
+    <Resource Include="Разработка логотипа HD.png" />
+    <Resource Include="Разработка сайта HD.png" />
+    <Resource Include="Разработка фирменного стиля HD.png" />
+  </ItemGroup>
+
 </Project>
