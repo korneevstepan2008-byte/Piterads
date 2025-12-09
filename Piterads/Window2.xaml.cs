@@ -23,5 +23,22 @@ namespace Piterads
         {
             InitializeComponent();
         }
+
+        public Window1 Window1 { get; private set; }
+        public Window3 Window3 { get; private set; }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 = new Window1();
+            Window1.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Window3 = new Window3();
+            Window3.Show();
+            this.Close();
+        }
     }
 }

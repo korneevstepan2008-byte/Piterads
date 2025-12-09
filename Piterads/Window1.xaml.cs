@@ -19,14 +19,35 @@ namespace Piterads
     /// </summary>
     public partial class Window1 : Window
     {
+
         public Window1()
         {
             InitializeComponent();
         }
 
-        private void InitializeComponent()
+        public Window3 Window3 { get; private set; }
+        public Window2 Window2 { get; private set; }
+        public MainWindow MainWindow { get; private set; }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Window3 = new Window3();
+            Window3.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Window2 = new Window2();
+            Window2.Show();
+            this.Close();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MainWindow = new MainWindow();
+            MainWindow.Show();
+            this.Close();
         }
     }
 }

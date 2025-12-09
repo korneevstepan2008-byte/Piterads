@@ -68,6 +68,7 @@
                                        Margin="10,0,0,0"
                                        VerticalAlignment="Center"
                                        IsHitTestVisible="False">
+                                
                                 <TextBlock.Style>
                                     <Style TargetType="{x:Type TextBlock}">
                                         <Setter Property="Visibility" Value="Collapsed"/>
@@ -107,7 +108,7 @@
 
         <StackPanel Grid.Column="0" Margin="40">
 
-            <TextBlock Text="Регистрация" 
+            <TextBlock Text="Регистраця" 
                        FontSize="36" 
                        FontFamily="Segoe Script"
                        Foreground="#D2B48C"
@@ -117,9 +118,9 @@
             <Border Background="#D2B48C"
                     CornerRadius="10"
                     Padding="20"
-                    Width="320">
+                    Width="320" Height="340">
 
-                <StackPanel>
+                <StackPanel Margin="0,0,0,-10">
 
                     <TextBox x:Name="FioTextBox" 
                              Style="{StaticResource RegistrationTextBoxStyle}" 
@@ -150,15 +151,15 @@
                                  Tag="Пароль"
                                  Text="Пароль"/>
 
-                    <Separator Height="20" Visibility="Hidden"/>
+                    <Separator Height="5" Visibility="Hidden"/>
 
                     <Button Content="Вход"
                             Style="{StaticResource LoginButtonStyle}"
-                            Click="RegisterButton_Click"
+
                             HorizontalAlignment="Right"
                             Width="80"
                             Height="30"
-                            Margin="0,10,0,0" FontWeight="Normal"/>
+                            Margin="0,10,0,0" FontWeight="Normal" Click="Button_Click"/>
                 </StackPanel>
             </Border>
         </StackPanel>

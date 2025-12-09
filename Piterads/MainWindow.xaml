@@ -44,7 +44,7 @@ Background="#F5F5F5">
                             <Border Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="2">
+                        CornerRadius="7">
                                 <ScrollViewer x:Name="PART_ContentHost"/>
                             </Border>
                         </Grid>
@@ -79,20 +79,21 @@ Background="#F5F5F5">
         </TextBlock>
 
         <Border Width="450"
-        Height="255"
+        Height="199"
         Background="#696969"
         CornerRadius="10"
         HorizontalAlignment="Center"
         VerticalAlignment="Center">
 
-            <StackPanel Margin="40">
+            <StackPanel Margin="20,20,20,10">
 
                 <TextBox x:Name="LoginTextBox"
                  Height="40"
                  FontSize="16"
                  Padding="10,0,0,0"
                  VerticalContentAlignment="Center"
-                 BorderThickness="0" TextChanged="LoginTextBox_TextChanged">
+                 BorderThickness="0"
+                 Text="Логин">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type TextBlock}">
                             <Setter Property="IsHitTestVisible" Value="False"/>
@@ -119,34 +120,69 @@ Background="#F5F5F5">
                 </TextBox>
 
                 <Separator Height="20" Visibility="Hidden"/>
-                <PasswordBox x:Name="PasswordBox"
-                     Height="40"
-                     FontSize="16"
-                     Padding="0,0,0,0"
-                     VerticalContentAlignment="Center"
-                     BorderThickness="0" RenderTransformOrigin="0.504,0.513"/>
+                <TextBox x:Name="PasswordTextBox"
+                Height="40"
+                FontSize="16"
+                Padding="10,0,0,0"
+                VerticalContentAlignment="Center"
+                BorderThickness="0"
+                Text="Пароль">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="IsHitTestVisible" Value="False"/>
+                            <Setter Property="Foreground" Value="#999999"/>
+                            <Setter Property="Margin" Value="10,0,0,0"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Text" Value="Логин"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=LoginTextBox}" Value="">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Text, ElementName=LoginTextBox}" Value="{x:Null}">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Text, ElementName=LoginTextBox}" Value=" ">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Text, ElementName=LoginTextBox}" Value="Value">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
 
-                <Separator Height="40" Visibility="Hidden"/>
 
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Separator Height="10" Visibility="Hidden"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="right">
 
                     <Button Content="Зарегистрироваться или"
                     Style="{StaticResource LinkButtonStyle}"
-                    Click="RegisterButton_Click"
-                    Foreground="White"
-                    FontSize="14"/>
 
+                    Foreground="White"
+                    FontSize="14" Click="Button_Click"/>
                     <Button x:Name="LoginButton"
                     Content="Войти"
 
-                    Height="30"
-                    Margin="5,0,0,0"
+                    Height="21"
                     Background="#D2B48C"
                     Foreground="White"
                     FontWeight="Bold"
                     BorderThickness="0"
-                    
-                    Click="LoginButton_Click" Width="80"/>
+                    Width="62" Click="LoginButton_Click"/>
+                </StackPanel>
+                <Separator Height="1" Visibility="Hidden"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="right">
+                    <Button x:Name="AdminButton"
+                    Content="Администратор"
+                    Height="21"
+                    Background="Transparent"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    BorderThickness="0"
+                    Width="105" Click="AdminButton_Click"/>
+
                 </StackPanel>
             </StackPanel>
         </Border>

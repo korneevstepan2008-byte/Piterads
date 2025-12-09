@@ -15,22 +15,18 @@ using System.Windows.Shapes;
 namespace Piterads
 {
     /// <summary>
-    /// Логика взаимодействия для Window3.xaml
+    /// Логика взаимодействия для Window5.xaml
     /// </summary>
-    public partial class Window3 : Window
+    public partial class Window5 : Window
     {
-        public Window3()
+        public Window5()
         {
             InitializeComponent();
         }
 
-        public Window1 Window1 { get; private set; }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Window1 = new Window1();
-            Window1.Show();
-            this.Close();
+
         }
     }
 }
