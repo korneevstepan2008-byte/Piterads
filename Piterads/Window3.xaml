@@ -7,7 +7,7 @@
         Title="Регистрация" Height="550" Width="850"
         WindowStartupLocation="CenterScreen"
         Background="#696969">
-    <Window.Resources>
+    <!--<Window.Resources>
 
         <Style x:Key="VerticalSpacer" TargetType="Separator">
             <Setter Property="Height" Value="10"/>
@@ -99,7 +99,7 @@
             <Setter Property="BorderThickness" Value="0"/>
         </Style>
 
-    </Window.Resources>
+    </Window.Resources>-->
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="400"/>
@@ -123,38 +123,38 @@
                 <StackPanel Margin="0,0,0,-10">
 
                     <TextBox x:Name="FioTextBox" 
-                             Style="{StaticResource RegistrationTextBoxStyle}" 
+
                              Tag="ФИО"
-                             Text="ФИО"/>
-                    <Separator Style="{StaticResource VerticalSpacer}"/>
+                             Text="ФИО" Height="32"/>
+                    <Separator Height="10" Visibility="Hidden"/>
 
                     <TextBox x:Name="LoginTextBox" 
-                             Style="{StaticResource RegistrationTextBoxStyle}" 
+
                              Tag="Логин"
-                             Text="Логин"/>
-                    <Separator Style="{StaticResource VerticalSpacer}"/>
+                             Text="Логин" Height="32"/>
+                    <Separator Height="10" Visibility="Hidden"/>
 
                     <TextBox x:Name="EmailTextBox" 
-                             Style="{StaticResource RegistrationTextBoxStyle}" 
+
                              Tag="Электронная почта"
-                             Text="Электронная почта"/>
-                    <Separator Style="{StaticResource VerticalSpacer}"/>
+                             Text="Электронная почта" Height="32"/>
+                    <Separator Height="10" Visibility="Hidden"/>
 
                     <TextBox x:Name="PhoneTextBox" 
-                             Style="{StaticResource RegistrationTextBoxStyle}" 
+
                              Tag="Телефон"
-                             Text="Телефон"/>
-                    <Separator Style="{StaticResource VerticalSpacer}"/>
+                             Text="Телефон" Height="32"/>
+                    <Separator Height="10" Visibility="Hidden"/>
 
                     <TextBox x:Name="PasswordBox" 
-                                 Style="{StaticResource RegistrationTextBoxStyle}" 
+ 
                                  Tag="Пароль"
-                                 Text="Пароль"/>
+                                 Text="Пароль" Height="32"/>
 
-                    <Separator Height="5" Visibility="Hidden"/>
+                    <Separator Height="20" Visibility="Hidden"/>
 
                     <Button Content="Вход"
-                            Style="{StaticResource LoginButtonStyle}"
+
 
                             HorizontalAlignment="Right"
                             Width="80"

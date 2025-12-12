@@ -7,7 +7,7 @@
         Title="Админ-панель" Height="650" Width="1000"
         WindowStartupLocation="CenterScreen"
         Background="#696969">
-    <Window.Resources>
+    <!--<Window.Resources>
         <Style x:Key="NavButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="#696969"/>
             <Setter Property="Foreground" Value="White"/>
@@ -65,7 +65,7 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-    </Window.Resources>
+    </Window.Resources>-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -105,10 +105,10 @@
 
         <StackPanel Grid.Row="1" Orientation="Vertical" Margin="10,10,10,10">
             <StackPanel Orientation="Horizontal">
-                <Button Content="Клиенты" Style="{StaticResource NavButtonActiveStyle}"/>
-                <Button Content="Продукты" Style="{StaticResource NavButtonStyle}"/>
-                <Button Content="Проекты" Style="{StaticResource NavButtonStyle}"/>
-                <Button Content="Тип проекта" Style="{StaticResource NavButtonStyle}"/>
+                <Button Content="Клиенты"/>
+                <Button Content="Продукты"/>
+                <Button Content="Проекты"/>
+                <Button Content="Тип проекта"/>
             </StackPanel>
 
             <Grid Margin="0,15,0,0">
@@ -126,9 +126,9 @@
                     </Button>
                 </Grid>
 
-                <Button Grid.Column="1" Content="Добавить" Style="{StaticResource ActionButtonStyle}" />
-                <Button Grid.Column="2" Content="Редактировать" Style="{StaticResource ActionButtonStyle}" />
-                <Button Grid.Column="3" Content="Удалить" Style="{StaticResource ActionButtonStyle}" />
+                <Button Grid.Column="1" Content="Добавить"/>
+                <Button Grid.Column="2" Content="Редактировать"/>
+                <Button Grid.Column="3" Content="Удалить"/>
             </Grid>
         </StackPanel>
 
@@ -139,10 +139,8 @@
                       Background="#F8C789"
                       HeadersVisibility="Column"
                       RowHeaderWidth="0"
-                      BorderThickness="0"
-                      CellStyle="{StaticResource DataGridCellStyle}"
-                      ColumnHeaderStyle="{StaticResource DataGridColumnHeaderStyle}"
-                      RowStyle="{StaticResource DataGridRowStyle}">
+                      BorderThickness="0">
+
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="User_Id" Binding="{Binding UserId}" Width="50"/>

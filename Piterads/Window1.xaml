@@ -7,7 +7,7 @@
         Title="Piterads" Height="800" Width="1200"
         WindowStartupLocation="CenterScreen"
         Background="#F0F0F0">
-    <Window.Resources>
+    <!--<Window.Resources>
         <Style x:Key="HeaderButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="0"/>
@@ -50,7 +50,7 @@
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
-    </Window.Resources>
+    </Window.Resources>-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
@@ -72,7 +72,7 @@
                            Foreground="#333333"/>
 
                 <Button Grid.Column="1" Content="Выход" 
-                        Style="{StaticResource HeaderButtonStyle}" 
+                         
                         Foreground="#666666" 
                         Margin="0,0,15,0" Click="Button_Click_2"/>
 
@@ -107,63 +107,65 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource ServiceCardStyle}">
+            <Border Grid.Row="0" Grid.Column="0" >
                 <Border.Background>
                     <ImageBrush ImageSource="/Разработка брендбука HD.png" Stretch="UniformToFill"/>
                 </Border.Background>
                 <StackPanel VerticalAlignment="Bottom" Margin="15">
-                    <TextBlock Text="Разработка брендбука" Style="{StaticResource CardTitleStyle}"/>
-                    <Button Content="Подробнее" Style="{StaticResource CardButtonStyle}" Click="Button_Click_1"/>
+                    <TextBlock Text="Разработка брендбука" />
+                    <Button Content="Подробнее" Click="Button_Click_1"/>
                 </StackPanel>
             </Border>
 
-            <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource ServiceCardStyle}">
+            <Border Grid.Row="0" Grid.Column="1" >
                 <Border.Background>
+                    
                     <ImageBrush ImageSource="/Разработка фирменного стиля HD.png" Stretch="UniformToFill"/>
+                    
                 </Border.Background>
                 <StackPanel VerticalAlignment="Bottom" Margin="15">
-                    <TextBlock Text="Разработка фирменного стиля" Style="{StaticResource CardTitleStyle}"/>
-                    <Button Content="Подробнее" Style="{StaticResource CardButtonStyle}"/>
+                    <TextBlock Text="Разработка фирменного стиля" />
+                    <Button Content="Подробнее"/>
                 </StackPanel>
             </Border>
 
-            <Border Grid.Row="0" Grid.Column="2" Style="{StaticResource ServiceCardStyle}">
+            <Border Grid.Row="0" Grid.Column="2">
                 <Border.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Разработка логотипа HD.png"/>
                 </Border.Background>
                 <StackPanel VerticalAlignment="Bottom" Margin="15">
-                    <TextBlock Text="Разработка логотипа" Style="{StaticResource CardTitleStyle}"/>
-                    <Button Content="Подробнее" Style="{StaticResource CardButtonStyle}"/>
+                    <TextBlock Text="Разработка логотипа" />
+                    <Button Content="Подробнее" />
                 </StackPanel>
             </Border>
 
-            <Border Grid.Row="1" Grid.Column="0" Style="{StaticResource ServiceCardStyle}">
+            <Border Grid.Row="1" Grid.Column="0" >
                 <Border.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Наружная реклама HD.png"/>
                 </Border.Background>
                 <StackPanel VerticalAlignment="Bottom" Margin="15">
-                    <TextBlock Text="Наружная реклама" Style="{StaticResource CardTitleStyle}"/>
-                    <Button Content="Подробнее" Style="{StaticResource CardButtonStyle}"/>
+                    <TextBlock Text="Наружная реклама" />
+                    <Button Content="Подробнее" />
                 </StackPanel>
             </Border>
 
-            <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource ServiceCardStyle}">
+            <Border Grid.Row="1" Grid.Column="1">
                 <Border.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Интернет реклама HD.png"/>
                 </Border.Background>
                 <StackPanel VerticalAlignment="Bottom" Margin="15">
-                    <TextBlock Text="Интернет реклама" Style="{StaticResource CardTitleStyle}"/>
-                    <Button Content="Подробнее" Style="{StaticResource CardButtonStyle}"/>
+                    <TextBlock Text="Интернет реклама" />
+                    <Button Content="Подробнее" />
                 </StackPanel>
             </Border>
 
-            <Border Grid.Row="1" Grid.Column="2" Style="{StaticResource ServiceCardStyle}">
+            <Border Grid.Row="1" Grid.Column="2" >
                 <Border.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Разработка сайта HD.png"/>
                 </Border.Background>
                 <StackPanel VerticalAlignment="Bottom" Margin="15">
-                    <TextBlock Text="Разработка сайта" Style="{StaticResource CardTitleStyle}"/>
-                    <Button Content="Подробнее" Style="{StaticResource CardButtonStyle}"/>
+                    <TextBlock Text="Разработка сайта" />
+                    <Button Content="Подробнее" />
                 </StackPanel>
             </Border>
 
