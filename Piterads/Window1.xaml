@@ -71,10 +71,10 @@
                            FontWeight="SemiBold" 
                            Foreground="#333333"/>
 
-                <Button Grid.Column="1" Content="Выход" 
+                <Button Content="Выход" 
                          
                         Foreground="#666666" 
-                        Margin="0,0,15,0" Click="Button_Click_2"/>
+                        Margin="965,0,15,0" Click="Button_Click_2" Height="29" VerticalAlignment="Center"/>
 
                 <Button Grid.Column="2" Content="Обратиться" 
                         Background="#F8C789" 
@@ -112,19 +112,19 @@
                     <ImageBrush ImageSource="/Разработка брендбука HD.png" Stretch="UniformToFill"/>
                 </Border.Background>
                 <StackPanel VerticalAlignment="Bottom" Margin="15">
-                    <TextBlock Text="Разработка брендбука" />
+                    <TextBlock Text="Разработка брендбука" FontSize="18" FontWeight="Bold" Foreground="White" />
                     <Button Content="Подробнее" Click="Button_Click_1"/>
                 </StackPanel>
             </Border>
 
             <Border Grid.Row="0" Grid.Column="1" >
                 <Border.Background>
-                    
+
                     <ImageBrush ImageSource="/Разработка фирменного стиля HD.png" Stretch="UniformToFill"/>
-                    
+
                 </Border.Background>
                 <StackPanel VerticalAlignment="Bottom" Margin="15">
-                    <TextBlock Text="Разработка фирменного стиля" />
+                    <TextBlock Text="Разработка фирменного стиля" FontSize="18" FontWeight="Bold" Foreground="White" />
                     <Button Content="Подробнее"/>
                 </StackPanel>
             </Border>
@@ -134,7 +134,7 @@
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Разработка логотипа HD.png"/>
                 </Border.Background>
                 <StackPanel VerticalAlignment="Bottom" Margin="15">
-                    <TextBlock Text="Разработка логотипа" />
+                    <TextBlock Text="Разработка логотипа" FontSize="18" FontWeight="Bold" Foreground="White" />
                     <Button Content="Подробнее" />
                 </StackPanel>
             </Border>
@@ -144,7 +144,7 @@
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Наружная реклама HD.png"/>
                 </Border.Background>
                 <StackPanel VerticalAlignment="Bottom" Margin="15">
-                    <TextBlock Text="Наружная реклама" />
+                    <TextBlock Text="Наружная реклама" FontSize="18" FontWeight="Bold" Foreground="White" />
                     <Button Content="Подробнее" />
                 </StackPanel>
             </Border>
@@ -154,7 +154,7 @@
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Интернет реклама HD.png"/>
                 </Border.Background>
                 <StackPanel VerticalAlignment="Bottom" Margin="15">
-                    <TextBlock Text="Интернет реклама" />
+                    <TextBlock Text="Интернет реклама" Foreground="White" FontSize="18" FontWeight="Bold" />
                     <Button Content="Подробнее" />
                 </StackPanel>
             </Border>
@@ -164,7 +164,7 @@
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Разработка сайта HD.png"/>
                 </Border.Background>
                 <StackPanel VerticalAlignment="Bottom" Margin="15">
-                    <TextBlock Text="Разработка сайта" />
+                    <TextBlock Text="Разработка сайта" Foreground="White" FontSize="18" FontWeight="Bold" />
                     <Button Content="Подробнее" />
                 </StackPanel>
             </Border>
