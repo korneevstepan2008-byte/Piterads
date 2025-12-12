@@ -49,5 +49,6 @@ namespace Piterads
             MainWindow.Show();
             this.Close();
         }
+
     }
 }

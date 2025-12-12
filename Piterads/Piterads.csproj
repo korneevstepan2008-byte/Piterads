@@ -19,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Rectangle 19.png" />
     <Resource Include="Интернет реклама HD.png" />
     <Resource Include="Наружная реклама HD.png" />

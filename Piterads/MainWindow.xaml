@@ -7,9 +7,11 @@ mc:Ignorable="d"
 Title="Вход" Height="450" Width="800"
 WindowStartupLocation="CenterScreen"
 Background="#F5F5F5">
+    
+    
     <Window.Resources>
         <Style x:Key="LinkButtonStyle" TargetType="{x:Type Button}">
-            <Setter Property="Template">
+            <!--<Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <TextBlock>
@@ -17,7 +19,7 @@ Background="#F5F5F5">
                         </TextBlock>
                     </ControlTemplate>
                 </Setter.Value>
-            </Setter>
+            </Setter>-->
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="0"/>
@@ -31,8 +33,8 @@ Background="#F5F5F5">
         </Style>
 
         <Style TargetType="{x:Type TextBox}">
-            <Setter Property="Template">
-                <Setter.Value>
+            <!--<Setter Property="Template">-->
+                <!--<Setter.Value>
                     <ControlTemplate TargetType="{x:Type TextBox}">
                         <Grid>
                             <TextBlock Text="{TemplateBinding Tag}"
@@ -55,10 +57,11 @@ Background="#F5F5F5">
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
-            </Setter>
+            </Setter>-->
         </Style>
 
     </Window.Resources>
+    
     <Grid>
         <TextBlock Text="ВХОД"
            FontSize="250"
@@ -88,6 +91,15 @@ Background="#F5F5F5">
             <StackPanel Margin="20,20,20,10">
 
                 <TextBox x:Name="LoginTextBox"
+                         Height="40"
+                         FontSize="16"
+                         Padding="10,0,0,0"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="0"
+                         TextChanged="LoginTextBox_TextChanged"
+                         Text="Логин"/>
+                
+                <!--<TextBox x:Name="LoginTextBox"
                  Height="40"
                  FontSize="16"
                  Padding="10,0,0,0"
@@ -117,7 +129,7 @@ Background="#F5F5F5">
                             </Style.Triggers>
                         </Style>
                     </TextBox.Resources>
-                </TextBox>
+                </TextBox>-->
 
                 <Separator Height="20" Visibility="Hidden"/>
                 <TextBox x:Name="PasswordTextBox"
@@ -126,14 +138,13 @@ Background="#F5F5F5">
                 Padding="10,0,0,0"
                 VerticalContentAlignment="Center"
                 BorderThickness="0"
-                Text="Пароль">
+                    Text="Пароль">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type TextBlock}">
                             <Setter Property="IsHitTestVisible" Value="False"/>
                             <Setter Property="Foreground" Value="#999999"/>
                             <Setter Property="Margin" Value="10,0,0,0"/>
                             <Setter Property="VerticalAlignment" Value="Center"/>
-                            <Setter Property="Text" Value="Логин"/>
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding Text, ElementName=LoginTextBox}" Value="">
                                     <Setter Property="Visibility" Value="Visible"/>
@@ -158,10 +169,8 @@ Background="#F5F5F5">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="right">
 
                     <Button Content="Зарегистрироваться или"
-                    Style="{StaticResource LinkButtonStyle}"
-
                     Foreground="White"
-                    FontSize="14" Click="Button_Click"/>
+                    FontSize="14" Click="Button_Click" Cursor=""/>
                     <Button x:Name="LoginButton"
                     Content="Войти"
 
